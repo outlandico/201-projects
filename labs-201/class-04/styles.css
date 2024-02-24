@@ -1,0 +1,163 @@
+
+header {
+    background-color: rgb(28, 144, 136);
+    margin: auto;
+    height: 100px;
+    width: 100%; /* Extend header to full width */
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Stick the header to the top of the viewport */
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+  }
+
+  
+body {
+    background-color: #150f0a;
+    color: rgba(255, 253, 253, 0.915);
+    padding-top: 120px; /* Ensure content starts below the header */
+  }
+
+
+h1 {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    font-size: 20pt;
+}
+
+ h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: white;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.paragraph {
+    
+    margin: 20px auto;
+    width: 40%;
+    
+    color: white;
+    /* display:flex; */
+}
+
+p {
+    margin: 20px auto;
+    width: 60%;
+    background-color: rgb(64, 40, 4, .3);
+    color: white;
+    padding: 20px;
+  }
+
+    
+
+
+ul {
+    color: white;
+    text-align: left;
+    margin: 10px auto; /* Add a left margin to move the list from the left side */
+    padding-left: 5px; /* Add left padding to the list items */
+     /* Remove default list styles */
+}
+
+ol {
+    color: white;
+    text-align: left;
+    margin: 10px auto; /* Add a left margin to move the list from the left side */
+    padding-left: 5px; /* Add left padding to the list items */
+     /* Remove default list styles */
+     list-style-type:decimal;
+}
+li {
+    margin-top: 20px;
+
+
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .left-column {
+    background-color: rgba(37, 238, 245, 0.8);
+    padding: 20px;
+    width: 200px; /* Adjust width as needed */
+    position: fixed;
+    top: 100px; /* Ensure the left column touches the bottom of the header */
+    bottom: 0; /* Stretch the left column to the bottom of the viewport */
+}
+
+.right-column {
+    background-color: rgba(37, 238, 245, 0.8);
+    padding: 20px;
+    width: 200px; /* Adjust width as needed */
+    position: fixed;
+    top: 100px; /* Ensure the right column touches the bottom of the header */
+    right: 0; /* Position the right column at the right edge */
+    bottom: 0; /* Stretch the right column to the bottom of the viewport */
+}
+
+  
+  .scroll-container {
+    overflow-y: auto; /* Enable vertical scrolling */
+    flex-grow: 1; /* Allow the container to grow to fill available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ /* Center the buttons and text */
+.button-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.button-container li {
+    margin-bottom: 10px; /* Adjust spacing between buttons */
+    text-align: center;
+}
+
+      
+      
+
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #2acdd3;
+    color: white;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;}
+
+
+
+/* Styling for different buttons can be added here */
+
+.footer {
+    margin: 100px auto;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

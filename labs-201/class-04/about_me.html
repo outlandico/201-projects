@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adam Jimenez Website</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" /> <!-- Link to external CSS file -->
+    <script src="./app.js"></script>
+</head>
+<body>
+     <!-- Welcome message container -->
+    
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <main>
+        <section class="paragraph" id="paragraph">
+            <p>Hello, my name is Adam Jimenez. I am from Orange County where we have the beaches, mountains, deserts and valleys nearby! I served in the U.S. Navy for about 10 years of service and CA Army National Guard for 2 years of service.</p>
+            <p>I collect Peanuts characters and have an Annual Charles M. Schulz Museum Membership as well as Knott's Berry Farm!I attended Orange Coast College for Graphic Design Major. I also have experience in Photography; Videography; and printing apparel, promotional items and canopies! I have experience in glass etching as well!</p>
+        </section>
+        <script>
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('header');
+                var paragraph = document.getElementById('paragraph');
+            
+                if (window.scrollY > header.offsetHeight) {
+                    paragraph.classList.add('hidden');
+                } else {
+                    paragraph.classList.remove('hidden');
+                }
+            });
+        </script>
+        <div class="container">
+            <div class="left-column">
+                <ol>
+                    <h2>My Top 10 Places I've Visited</h2>
+                    <li>Spain</li>
+                    <li>Norway</li>
+                    <li>Quebec</li>
+                    <li>Columbia</li>
+                    <li>Aruba</li>
+                    <li>Florida</li>
+                    <li>Maine</li>
+                    <li>Washington</li>
+                    <li>Central Cali</li>
+                    <li>Alabama</li>
+                </ol>
+            </div>
+            <div class="scroll-container">
+                <div class="button-container">
+                    <ul>
+                        <li>
+                            <button onclick="guessMyFavoriteSport();">Guess My Favorite Sport Team!</button>
+                        </li>
+                        <li>
+                            <button onclick="askMilitaryService();">Have You Served in the Military?</button>
+                        </li>
+                        <li>
+                            <button onclick="askAboutBeachLiving()">Do You Live by the Beach?</button>
+                        </li>
+                        <li>
+                            <button onclick="askAboutCollection()">Do You Have a Collection?</button>
+                        </li>
+                        <li>
+                            <button onclick="askAboutGraphicDesignExperience()">Do You Have Experience in Graphic Design?</button>
+                        </li>
+                        <li>
+                            <button onclick="guessFavoriteColor()">Guess My Favorite Color!</button>
+                        </li>
+                        <li>
+                            <p>Guess a number between 1 and 20:</p>
+                            <input type="text" id="guessInput">
+                            <button onclick="checkGuess()">Submit Guess</button>
+                        </li>
+                        <li id="message"></li>
+                        <li id="score">Score: 0</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-column">
+                <ul>
+                    <h2>Work Experience</h2>
+                    <li>U.S. Navy- 1st Class Petty Officer</li>
+                    <li>CA Army National Guard- MP/Infantry Platoon Staff SGT.</li>
+                    <li>Home Base</li>
+                    <li>Montgomery Wards</li>
+                    <li>Electrician- Journeyman</li>
+                    <li>Construction- General</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
