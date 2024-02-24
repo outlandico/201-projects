@@ -1,0 +1,41 @@
+header {
+    background-color: mediumaquamarine;
+    margin: auto;
+    width: 60%;
+
+}
+
+body {
+    background-color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    margin: 50px auto;
+    width: 60%;
+    text-align: center;
+    color: white;
+}
+
+ul {
+    color: white;
+    margin-left: 20px; /* Add a left margin to move the list from the left side */
+    padding-left: 10px; /* Add left padding to the list items */
+}
+
+/* Apply styles to the li elements */
+li {
+    list-style: none; /* Remove default list styles */
+}
+
+.footer {
+    margin:100px auto;
+    background-color: black;
+    color: white; /* This sets the text color to white for better visibility */
+    padding: 20px; /* Adjust padding according to your design */
+    text-align: center; /* Align text to center within the footer */
+}
