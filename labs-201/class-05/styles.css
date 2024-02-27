@@ -65,6 +65,9 @@ li {
 
 
   
+  .container {
+    display: flex;
+  }
   
   .left-column {
     background-color: rgba(37, 238, 245, 0.8);
