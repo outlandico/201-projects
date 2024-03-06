@@ -92,7 +92,7 @@ function Product(name, imagePath) {
 }
 
 // Define an array to hold all products
-const products = [];
+const products = [;
 
 // Add product objects to the array
 products.push(new Product('Bag', './images/bag.jpg'));
