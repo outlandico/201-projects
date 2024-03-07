@@ -31,7 +31,6 @@ function upvote(productName) {
             productVotes[productName] = 1;
         }
         updateBarChart(); // Update the bar chart
-        generateAndDisplayNewProducts(); // Generate and display new products after vote 
         generateAndDisplayNewProducts(); // Generate and display new products after vote
     } else {
         console.log("You have reached the vote limit.");
@@ -154,25 +153,6 @@ function displayProducts(products) {
     });
 }
 
-// Function to store products array in local storage
-function storeProducts() {
-    localStorage.setItem('products', JSON.stringify(products));
-}
-
-// Function to retrieve products array from local storage
-function retrieveProducts() {
-    const storedProductsJSON = localStorage.getItem('products');
-    if (storedProductsJSON !== null) {
-        // Parse the JSON string back into an array of products
-        products = JSON.parse(storedProductsJSON);
-    } else {
-        // If no products found in local storage, initialize with default products
-        initializeProducts();
-    }
-    return products; // Adding this line to return the products array
-}// Call retrieveProducts function when DOM content is loaded
-document.addEventListener('DOMContentLoaded', retrieveProducts);
-
 // Array to store the previous set of products
 let previousProducts = [];
 
@@ -217,4 +197,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-console.log("test")
