@@ -39,7 +39,7 @@ function upvote(productName) {
 
 // Function to increment views
 function incrementViews() {
-    if (views < 10) {
+    if (views < 25) {
         views++;
         console.log("View recorded");
         updateBarChart(); // Update the bar chart
@@ -117,14 +117,30 @@ products.push(new Product('Wine-glass', './images/wine-glass.jpg'));
 // Function to generate three unique product images
 function generateThreeUniqueProducts() {
     const uniqueProducts = [];
-    const tempProducts = [...products]; // Create a temporary copy of the products array
-    while (uniqueProducts.length < 3 && tempProducts.length > 0) {
+    let tempProducts = [...products]; // Create a temporary copy of the products array
+
+    // If there are no remaining products to show, reset the temporary products array
+    if (tempProducts.length === 0) {
+        tempProducts = [...previousProducts];
+        previousProducts = [];
+    }
+
+    // Cycle through the remaining products until three unique ones are found
+    while (uniqueProducts.length < 3) {
         const randomIndex = Math.floor(Math.random() * tempProducts.length);
         const product = tempProducts[randomIndex];
-        uniqueProducts.push(product);
-        product.timesShown++; // Increment times shown
-        tempProducts.splice(randomIndex, 1); // Remove the selected product from temporary array
+
+        // If the product is not already in the uniqueProducts array, add it
+        if (!uniqueProducts.includes(product)) {
+            uniqueProducts.push(product);
+            previousProducts.push(product); // Store the product in the previousProducts array
+            product.timesShown++; // Increment times shown
+        }
+
+        // Remove the selected product from the temporary array
+        tempProducts.splice(randomIndex, 1);
     }
+
     return uniqueProducts;
 }
 
@@ -195,5 +211,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
 
