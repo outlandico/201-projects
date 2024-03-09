@@ -15,26 +15,8 @@ body {
     z-index: 999; /* Ensure header is on top of other elements */
 }
 
-/* Container styles */
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: 120px; /* Ensure content is below the header */
-}
 
-/* Left column styles */
-.left-column {
-    background-color: rgba(196, 196, 196, 0.3);
-    width: 200px;
-    height: 800px;
-    padding: 10px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 120px; /* Ensure it starts below the header */
-    left: 0; /* Position at the left */
-}
+
 
 /* Total list styles */
 .totals {
@@ -50,22 +32,23 @@ body {
     font-weight: bold;
 }
 
-/* Images container styles */
-.images-container {
+
+
+.container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 200px auto;
-    max-width: 959px;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
 }
 
-.images-container img {
-    width: 150px;
-    height: auto;
-    margin: 10px; /* Adjust spacing between images */
+.product {
+    flex: 0 0 auto;
+    margin-right: 10px;
 }
 
-
+.product img {
+    width: 80px; /* Set the width of the images */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
 
 
 .bar-chart-container {
